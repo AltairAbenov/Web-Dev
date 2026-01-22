@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Colorful creature</title>
+        <style> body {
+            background:rgb(64, 74, 74);
+        }
+        p {
+            color:rgb(176, 155, 176);
+        }
+        h1 {
+            color:rgb(112, 87, 112);
+        }
+        </style>
+        
+        
+    </head>
+    <body>
+        
+        <h1>The coolest creature</h1>
+        
+        <p>The <em> Crocodiles </em> <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/crocodiles.png"> are awesome<strong> because i love them</strong>.</p>
+        
+    </body>
+</html>
