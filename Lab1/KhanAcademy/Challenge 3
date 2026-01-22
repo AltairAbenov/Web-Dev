@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Challenge: Wishlist</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <ol>
+            <li>First activity</li>
+            <li>Second activity</li>
+            <li>Third activity</li>
+        </ol>
+    </body>
+</html>
