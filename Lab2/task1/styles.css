@@ -1,1 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
 
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.logo {
+  color: #1877f2;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #1877f2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.create {
+  background: #42b72a;
+}
+
+.forgot {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #1877f2;
+  text-decoration: none;
+}
