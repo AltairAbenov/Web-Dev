@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#e9e9e9;
+    font-family: Arial, sans-serif;
+}
+
+.top-logo{
+    width:35px;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+.wrapper{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+}
+
+.phone{
+    width:500px;
+    border-radius: 40px;
+}
+
+.right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.card{
+    width:350px;
+    background:white;
+    border:1px solid #ddd;
+    padding:40px;
+    text-align:center;
+}
+
+.instagram-text{
+    font-family: cursive;
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input{
+    padding:10px;
+    margin-bottom:8px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    background:#fafafa;
+}
+
+button{
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    background:#0095f6;
+    color:white;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.separator{
+    display:flex;
+    align-items:center;
+    margin:20px 0;
+    color:#888;
+    font-size:12px;
+}
+
+.line{
+    flex:1;
+    height:1px;
+    background:#ddd;
+}
+
+.separator span{
+    margin:0 10px;
+}
+
+.facebook{
+    color:#385185;
+    font-weight:bold;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.forgot{
+    display:block;
+    margin-top:15px;
+    font-size:12px;
+    text-decoration:none;
+    color:#00376b;
+}
+
+.signup{
+    width:350px;
+    background:white;
+    border:1px solid #ddd;
+    margin-top:10px;
+    padding:20px;
+    text-align:center;
+    font-size:14px;
+}
