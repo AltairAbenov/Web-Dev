@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f6f8fa;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    color:gray;
+    margin-bottom:20px;
+}
+
+.hero button{
+    width: 200px;
+    font-size:20px;
+    font-weight: 600;
+    letter-spacing:0.3px;
+    padding: 12px 24px;
+    background:#24292e;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.pricing{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:60px 20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:260px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    font-size:32px;
+    margin:10px 0;
+}
+
+.card span{
+    font-size:16px;
+    color:gray;
+}
+
+.card button{
+    margin-top:20px;
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#000000;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.popular{
+    transform:scale(1.05);
+    border:2px solid #000000;
+}
+
+.badge{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#000000;
+    color:white;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.addons{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.addons h2{
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3, 250px);
+    justify-content:center;
+    gap:20px;
+}
+
+.addon{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+.features{
+    list-style:none;
+    margin-top:20px;
+    text-align:left;
+}
+
+.features li{
+    margin:8px 0;
+    font-size:14px;
+}
