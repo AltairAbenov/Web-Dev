@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {ReversePipe} from './reverse.pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  template: ` Reverse Machine: {{ word | reverse }} `,
+  imports: [ReversePipe],
 })
 export class App {
-  protected readonly title = signal('learn-angular');
+  word = 'You are a champion';
 }
