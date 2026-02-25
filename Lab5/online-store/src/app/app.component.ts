@@ -16,10 +16,8 @@ export class AppComponent implements OnInit {
 
   categories: Category[] = [];
 
-  // null означает что категория ещё не выбрана — показываем приветствие
   selectedCategoryId: number | null = null;
 
-  // Продукты выбранной категории — передаём в ProductListComponent
   filteredProducts: Product[] = [];
 
   constructor(private productService: ProductService) {}
@@ -30,7 +28,6 @@ export class AppComponent implements OnInit {
 
   selectCategory(categoryId: number): void {
     this.selectedCategoryId = categoryId;
-    // Каждый раз при смене категории загружаем свежий массив из сервиса
     this.filteredProducts = this.productService.getProductsByCategory(categoryId);
   }
 }

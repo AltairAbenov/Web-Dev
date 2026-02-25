@@ -12,10 +12,8 @@ import { NgFor, NgIf } from '@angular/common';
 })
 export class ProductListComponent {
 
-  // Получаем продукты от AppComponent через @Input
   @Input() products: Product[] = [];
 
-  // Обрабатываем лайк: находим продукт по id и увеличиваем счётчик
   onLike(productId: number): void {
     const product = this.products.find(p => p.id === productId);
     if (product) {
@@ -23,7 +21,6 @@ export class ProductListComponent {
     }
   }
 
-  // Обрабатываем удаление: фильтруем массив, убирая продукт с нужным id
   onDelete(productId: number): void {
     this.products = this.products.filter(p => p.id !== productId);
   }

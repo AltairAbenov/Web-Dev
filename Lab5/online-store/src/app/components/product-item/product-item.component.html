@@ -1,6 +1,5 @@
 <div class="card">
 
-  <!-- Верхняя часть: картинка и текст -->
   <div class="card-top">
     <div class="image-wrapper">
       <img [src]="allImages[currentImageIndex]" [alt]="product.name">
@@ -17,7 +16,6 @@
     <p class="description">{{ product.description }}</p>
   </div>
 
-  <!-- Нижняя часть: цена, рейтинг и кнопки — всегда прижаты ко дну -->
   <div class="card-bottom">
     <div class="price">{{ product.price | number:'1.0-0':'ru-RU' }} ₸</div>
     <div class="rating">⭐ {{ product.rating }}</div>

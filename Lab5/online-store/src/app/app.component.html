@@ -1,9 +1,7 @@
-<!-- Шапка -->
 <div class="floating-header">
   <h1 class="title">Online Store</h1>
   <p class="tagline">Best gadgets for best prices</p>
 
-  <!-- Кнопки категорий -->
   <div class="categories">
     <button
       *ngFor="let category of categories"
@@ -15,13 +13,11 @@
   </div>
 </div>
 
-<!-- Если категория не выбрана — приветствие -->
 <div class="welcome" *ngIf="selectedCategoryId === null">
   <h2>👋 Welcome!</h2>
   <p>Select a category above to browse products.</p>
 </div>
 
-<!-- Если категория выбрана — список продуктов -->
 <app-product-list
   *ngIf="selectedCategoryId !== null"
   [products]="filteredProducts">

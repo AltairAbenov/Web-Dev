@@ -13,10 +13,8 @@ export class ProductItemComponent {
 
   @Input() product!: Product;
 
-  // Эмитим id продукта наверх — родитель сам решает как удалять
   @Output() delete = new EventEmitter<number>();
 
-  // Эмитим id продукта для лайка — логика тоже в родителе
   @Output() like = new EventEmitter<number>();
 
   currentImageIndex = 0;

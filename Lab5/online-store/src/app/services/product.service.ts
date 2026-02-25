@@ -16,7 +16,7 @@ export class ProductService {
 
   products: Product[] = [
 
-    // ── Smartphones (categoryId: 1) ──────────────────────────────────────────
+
     {
       id: 1,
       categoryId: 1,
@@ -98,7 +98,7 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/apple-iphone-17-256gb-chernyi-145466647/?c=353220100'
     },
 
-    // ── Laptops (categoryId: 2) ──────────────────────────────────────────────
+
     {
       id: 6,
       categoryId: 2,
@@ -175,7 +175,7 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/hp-spectre-x360-2-in-1-16-aa0004ci-16-16-gb-ssd-512-gb-win-11-home-b6st5ea-134505376/?c=353220100'
     },
 
-    // ── Headphones (categoryId: 3) ───────────────────────────────────────────
+
     {
       id: 11,
       categoryId: 3,
@@ -252,7 +252,6 @@ export class ProductService {
       link: 'https://kaspi.kz/shop/p/naushniki-jbl-tune-770nc-chernyi-112143394/?c=353220100'
     },
 
-    // ── Tablets (categoryId: 4) ──────────────────────────────────────────────
     {
       id: 16,
       categoryId: 4,

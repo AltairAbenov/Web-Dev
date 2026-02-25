@@ -29,8 +29,6 @@
   justify-content: center;
 }
 
-/* ── Категории ── */
-
 .categories {
   display: flex;
   justify-content: center;
@@ -56,13 +54,10 @@
   transform: scale(1.04);
 }
 
-/* Активная категория — залитая кнопка */
 .category-btn.active {
   background: #0088cc;
   color: white;
 }
-
-/* ── Приветствие ── */
 
 .welcome {
   text-align: center;

@@ -7,7 +7,7 @@ import { DecimalPipe } from '@angular/common';
   standalone: true,
   imports: [DecimalPipe],
   templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.css'   // styleUrl вместо styleUrls — Angular 17+
+  styleUrl: './product-card.component.css'
 })
 export class ProductCardComponent {
 
@@ -15,7 +15,7 @@ export class ProductCardComponent {
 
   currentImageIndex = 0;
 
-  // Геттер объединяет главное фото и галерею в один массив
+
   get allImages(): string[] {
     if (!this.product.images || this.product.images.length === 0) {
       return [this.product.image];
@@ -33,7 +33,6 @@ export class ProductCardComponent {
   }
 
   openKaspi(): void {
-    // Убрали параметр link — компонент и так знает свой product
     window.open(this.product.link, '_blank');
   }
 

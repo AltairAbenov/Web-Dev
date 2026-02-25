@@ -7,17 +7,15 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  transition: transform 0.3s;  /* явно указываем что анимируем, а не всё подряд */
+  transition: transform 0.3s;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
 }
 
-/* Убрали фиксированный height: 430px — он ломает карточки если текст длиннее */
 
 .card:hover {
   transform: scale(1.017);
 }
 
-/* ── Изображение ── */
 
 .image-wrapper {
   height: 140px;
@@ -30,10 +28,9 @@
 .image-wrapper img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;  /* contain вместо cover — чтобы не обрезать товар */
+  object-fit: contain;
 }
 
-/* ── Переключатель фото ── */
 
 .image-controls {
   display: flex;
@@ -44,7 +41,7 @@
 
 .image-controls button {
   min-width: 50px;
-  height: 22px;           /* было 15px — слишком маленькая зона клика */
+  height: 22px;
   padding: 0 6px;
   border-radius: 6px;
   border: none;
@@ -62,7 +59,6 @@
   transform: scale(1.25);
 }
 
-/* ── Разделитель ── */
 
 .divider {
   height: 1px;
@@ -70,19 +66,18 @@
   margin: 5px;
 }
 
-/* ── Текстовый блок ── */
 
 .name {
   font-weight: bold;
   font-size: 20px;
-  font-family: Roboto, sans-serif;  /* было "Roboto sans-serif" — невалидно */
+  font-family: Roboto, sans-serif;
   margin: 5px 0 7px;
 }
 
 .description {
   margin-top: 7px;
   font-size: 15px;
-  font-family: Roboto, sans-serif;  /* исправлен невалидный синтаксис */
+  font-family: Roboto, sans-serif;
   color: #444;
 }
 
@@ -98,7 +93,6 @@
   margin: 7px 0;
 }
 
-/* ── Кнопки действий ── */
 
 .actions {
   display: flex;
@@ -107,7 +101,7 @@
   margin-top: 10px;
 }
 
-/* Объединили .kaspi-button и .share-button — они были идентичны */
+
 .kaspi-button,
 .share-button {
   width: 100%;
@@ -122,7 +116,7 @@
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-/* Теперь hover только для этих кнопок, а не глобальный button:hover */
+
 .kaspi-button:hover,
 .share-button:hover {
   background: #0078b6;
