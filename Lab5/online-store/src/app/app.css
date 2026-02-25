@@ -1,0 +1,40 @@
+
+.floating-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: white;
+  padding: 1.5px 0;
+
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  text-align: center;
+
+  z-index: 1000;
+}
+
+.floating-header h1 {
+  margin: 0;
+  font-family: Bahnschrift;
+}
+
+.tagline {
+  margin: 1px 0 0;
+  font-size: 15px;
+  color: #3e3e3e;
+}
+
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
