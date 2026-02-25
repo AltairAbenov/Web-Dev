@@ -7,22 +7,15 @@ import { DecimalPipe } from '@angular/common';
   standalone: true,
   imports: [DecimalPipe],
   templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css']
+  styleUrl: './product-card.component.css'   // styleUrl вместо styleUrls — Angular 17+
 })
 export class ProductCardComponent {
 
   @Input() product!: Product;
 
-  shareWhatsApp() {
-    const url = encodeURIComponent(this.product.link);
-    window.open(`https://wa.me/?text=Check out this product: ${url}`, '_blank');
-  }
-  openKaspi(link: string) {
-    window.open(link, '_blank');
-  }
-
   currentImageIndex = 0;
 
+  // Геттер объединяет главное фото и галерею в один массив
   get allImages(): string[] {
     if (!this.product.images || this.product.images.length === 0) {
       return [this.product.image];
@@ -30,14 +23,29 @@ export class ProductCardComponent {
     return [this.product.image, ...this.product.images];
   }
 
-  nextImage() {
-    this.currentImageIndex =
-      (this.currentImageIndex + 1) % this.allImages.length;
+  nextImage(): void {
+    this.currentImageIndex = (this.currentImageIndex + 1) % this.allImages.length;
   }
 
-  prevImage() {
+  prevImage(): void {
     this.currentImageIndex =
-      (this.currentImageIndex - 1 + this.allImages.length) %
-      this.allImages.length;
+      (this.currentImageIndex - 1 + this.allImages.length) % this.allImages.length;
+  }
+
+  openKaspi(): void {
+    // Убрали параметр link — компонент и так знает свой product
+    window.open(this.product.link, '_blank');
+  }
+
+  shareWhatsApp(): void {
+    const url = encodeURIComponent(this.product.link);
+    window.open(`https://wa.me/?text=Check out this product: ${url}`, '_blank');
   }
 }
+
+
+
+
+
+
+

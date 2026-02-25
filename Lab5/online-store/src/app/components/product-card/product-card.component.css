@@ -1,6 +1,5 @@
 .card {
   width: 190px;
-  height: 430px;
   border: 1px solid #ddd;
   border-radius: 30px;
   padding: 25px;
@@ -8,14 +7,17 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  transition: 0.3s;
-
-  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+  transition: transform 0.3s;  /* явно указываем что анимируем, а не всё подряд */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
 }
+
+/* Убрали фиксированный height: 430px — он ломает карточки если текст длиннее */
 
 .card:hover {
   transform: scale(1.017);
 }
+
+/* ── Изображение ── */
 
 .image-wrapper {
   height: 140px;
@@ -28,8 +30,10 @@
 .image-wrapper img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  object-fit: contain;  /* contain вместо cover — чтобы не обрезать товар */
 }
+
+/* ── Переключатель фото ── */
 
 .image-controls {
   display: flex;
@@ -40,31 +44,25 @@
 
 .image-controls button {
   min-width: 50px;
-  height: 15px;
+  height: 22px;           /* было 15px — слишком маленькая зона клика */
   padding: 0 6px;
-
   border-radius: 6px;
   border: none;
-
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(4px);
-
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
-
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
-
 
 .image-controls button:hover {
   background: white;
   transform: scale(1.25);
 }
 
-
+/* ── Разделитель ── */
 
 .divider {
   height: 1px;
@@ -72,59 +70,61 @@
   margin: 5px;
 }
 
+/* ── Текстовый блок ── */
+
 .name {
   font-weight: bold;
   font-size: 20px;
-  font-family: Roboto;
-  margin-bottom: 7px;
-  margin-top: 5px;
+  font-family: Roboto, sans-serif;  /* было "Roboto sans-serif" — невалидно */
+  margin: 5px 0 7px;
 }
 
 .description {
   margin-top: 7px;
   font-size: 15px;
-  font-family: Roboto sans-serif;
+  font-family: Roboto, sans-serif;  /* исправлен невалидный синтаксис */
+  color: #444;
 }
 
 .price {
   font-size: 20px;
   font-weight: bold;
-  color: #000000;
-  font-family: Roboto;
+  color: #000;
+  font-family: Roboto, sans-serif;
 }
 
 .rating {
   font-size: 15px;
-  margin: 7px 0px;
+  margin: 7px 0;
 }
 
-.kaspi-button {
-  width: 100%;
-  flex: 1;
-  padding: 8px;
-  border: none;
-  background: #0088cc;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.6s;
+/* ── Кнопки действий ── */
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   margin-top: 10px;
 }
 
-button:hover {
-  background: #0078b6;
-  transform: scale(1.02);
-}
-
+/* Объединили .kaspi-button и .share-button — они были идентичны */
+.kaspi-button,
 .share-button {
   width: 100%;
-  flex: 1;
+  margin-bottom: 5px;
   padding: 8px;
   border: none;
   background: #0088cc;
   color: white;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.6s;
-  margin-top: 10px;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/* Теперь hover только для этих кнопок, а не глобальный button:hover */
+.kaspi-button:hover,
+.share-button:hover {
+  background: #0078b6;
+  transform: scale(1.02);
 }

@@ -7,4 +7,12 @@ export interface Product {
   image: string;
   images: string[];
   link: string;
+  categoryId: number; // новое поле — привязка к категории
+  likes: number;      // новое поле — счётчик лайков
 }
+
+
+
+
+
+
