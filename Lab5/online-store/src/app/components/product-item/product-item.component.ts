@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../../models/product.model';
-import { DecimalPipe } from '@angular/common';
+import { DecimalPipe, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-product-item',
   standalone: true,
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, NgIf],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.css'
 })
@@ -38,6 +38,10 @@ export class ProductItemComponent {
   onLike(): void {
     this.like.emit(this.product.id);
   }
+
+ /* isDeleteButtonVisible(): boolean {
+    return this.product.likes < 10;
+  }*/
 
   onDelete(): void {
     this.delete.emit(this.product.id);
