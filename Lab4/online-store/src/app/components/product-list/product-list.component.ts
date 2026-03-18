@@ -12,6 +12,7 @@ import { NgFor } from '@angular/common';
 })
 export class ProductListComponent {
 
+
   products: Product[] = [
     {
       id: 1,
@@ -173,6 +174,14 @@ export class ProductListComponent {
 
 
     ]
+
+  get productWithHighestPrice(): Product  {
+  
+    return this.products.reduce((maxProduct, currentProduct) => {
+      return currentProduct.price > maxProduct.price ? currentProduct : maxProduct;
+    }
+    , this.products[0] || null);
   }
 
 
+}

@@ -1,9 +1,6 @@
 <div class="albums-container">
   <h1>All Albums</h1>
 
-  <button (click)="SortFromAtoZ()">Sort from A to Z</button>
-  <button (click)="SortFromZtoA()">Sort from Z to A</button>
-
   <div *ngIf="loading" class="loading">
     <div class="spinner"></div>
     <p>Loading albums...</p>

@@ -1,6 +1,9 @@
 <div class="floating-header">
   <h1 class="title">Online Store</h1>
   <p class="tagline">Best gadgets for best prices</p>
+  <div> 
+  <input type="checkbox" (change)="productWithHighestPrice($event)"> Filter by highest price
+  </div>
 </div>
 
 <app-product-list></app-product-list>

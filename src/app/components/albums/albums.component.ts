@@ -26,7 +26,7 @@ export class AlbumsComponent implements OnInit {
       next: (data) => {
         this.albums = data;
         this.loading = false;
-        this.cdr.detectChanges();
+        this.cdr.detectChanges(); // ← принудительно обновить view
       },
       error: () => {
         this.loading = false;
@@ -46,15 +46,4 @@ export class AlbumsComponent implements OnInit {
       this.cdr.detectChanges();
     });
   }
-
-  SortFromAtoZ(): void {
-    this.albums.sort((a, b) => a.title.localeCompare(b.title));
-    this.cdr.detectChanges();
-  }
-
-  SortFromZtoA(): void {
-    this.albums.sort((a, b) => b.title.localeCompare(a.title));
-    this.cdr.detectChanges();
-  }
-
 }
