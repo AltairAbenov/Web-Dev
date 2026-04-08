@@ -7,6 +7,7 @@ localResources:
     - ..\Lab9\shop-back\OnlineShopAPI.postman_collection.json
 
 # Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
 cloudResources:
   collections:
-    ..\postman\collections\Online Shop API: cd1d97d4-1293-4637-b487-60816d37fcb4
+    ..\postman\collections\Online Shop API: 6510dc0c-9aec-4513-8137-947decf30a5c
